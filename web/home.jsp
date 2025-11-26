@@ -1,0 +1,182 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riot Games: Bringing Players the Best Games</title>
+    
+    <link rel="icon" href="https://www.riotgames.com/static/favicon-32x32-0e9e7a2b239c803e04d8de2739723933.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="riot-main.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <%@ include file="header.jsp" %>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>World's 25</h1>
+                <h2>World's 2025 Continues</h2>
+                <p>Worlds continues in Shanghai, where only two teams can advance. Everything is on the line - and the world is watching.</p>
+                <a href="https://lolesports.com/en-GB/" class="btn btn-primary">Watch Now</a>
+            </div>
+        </section>
+
+        <section id="games" class="section">
+            <div class="container">
+                <h2 class="section-title">Our Games</h2>
+                <div class="games-grid">
+                    <div class="game-card"><a href="https://www.leagueoflegends.com/">
+                        <img src="LOL-Main.avif" alt="League of Legends" class="game-card-image">
+                        <div class="game-card-content">
+                            <img src="Lol-Logo.jpeg" alt="League of Legends Logo" class="game-card-logo">
+                            <p>A 5v5 team-based strategy game where two teams of unique champions face off to destroy the other's base.</p>
+                        </div></a>
+                    </div>
+                    <div class="game-card"><a href="https://playvalorant.com/">
+                        <img src="valo-main.png" alt="VALORANT" class="game-card-image">
+                        <div class="game-card-content">
+                             <img src="Valorant-Logo.png" alt="VALORANT Logo" class="game-card-logo">
+                            <p>A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.</p>
+                        </div></a>
+                    </div>
+                    <div class="game-card"><a href="https://teamfighttactics.leagueoflegends.com/en-us/">
+                        <img src="TFT-Main.png" alt="Teamfight Tactics" class="game-card-image">
+                        <div class="game-card-content">
+                             <img src="Tft-logo.jpeg" alt="TFT Logo" class="game-card-logo">
+                            <p>An eight-person free-for-all strategy game where you draft, position, and fight your way to the top.</p>
+                        </div></a>
+                    </div>
+                    <div class="game-card"><a href="https://www.leagueoflegends.com/">
+                        <img src="lor-main.jpeg" alt="Legends of Runterra" class="game-card-image">
+                        <div class="game-card-content">
+                             <img src="Lol-Logo.jpeg" alt="LOR Logo" class="game-card-logo">
+                            <p>In this strategy card game, skill defines your success—not luck. Mix and match iconic champions, allies, and regions of Runeterra to unlock unique card synergies and outplay your opponent.</p>
+                        </div></a>
+                    </div>
+                    <div class="game-card"><a href="https://2xko.riotgames.com/">
+                        <img src="2XKO-Main.jpeg" alt="2XKO" class="game-card-image">
+                        <div class="game-card-content">
+                             <img src="2XKO_game_logo.svg.png" alt="2XKO Logo" class="game-card-logo">
+                            <p>2XKO is a free-to-play fighting game featuring the iconic champions from League of Legends. Fight solo or with a friend in explosive 2v2 showdowns.</p>
+                        </div></a>
+                    </div>
+                    <div class="game-card"><a href="https://wildrift.leagueoflegends.com/">
+                        <img src="wild-rifts-main.avif" alt="LoL: Wild Rift" class="game-card-image">
+                        <div class="game-card-content">
+                             <img src="wr-logo.png" alt="WR Logo" class="game-card-logo">
+                            <p>Team up with friends and test your skills in 5v5 MOBA combat. All the high-skill competition you crave, designed especially for mobile with revamped controls.</p>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <h2>Install Riot Games</h2><br><br>
+                <a href="https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.na.exe" class="btn btn-primary">Download</a>
+            </div>
+        </section>
+        
+        <section id="news" class="section">
+            <div class="container">
+                <h2 class="section-title">What's happening?</h2>
+                <a href="https://www.riotgames.com/en/news/celebrating-ten-years-of-global-service-month-at-riot-games"><div class="news-card1">
+                    <img src="global_service_month.png" alt="News Image 0">
+                    <div class="news-card-content">
+                        <p class="news-card-category">Inside Riot</p>
+                        <h3>Celebrating Ten Years Of Global Service Month At Riot Games</h3>
+                        <p class="news-card-date">October 16, 2025</p>
+                    </div></a>
+            </div>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <img src="Wild-rift.avif" alt="News Image 1">
+                        <div class="news-card-content">
+                            <p class="news-card-category">Esports</p>
+                            <h3>The largest Wild Rift community event is happening next month! Wild Rounds: SMASH will be making its return, November 14-16 in Vietnam! There will be creators from multiple regions and pros from China coming together to compete in 1v1’s, 5v5’s, and more. </h3>
+                            <p class="news-card-date">October 10, 2025</p>
+                        </div>
+                    </div>
+                     <div class="news-card">
+                        <img src="veto.jpg" alt="News Image 2">
+                        <div class="news-card-content">
+                            <p class="news-card-category">Valorant new agent changes</p>
+                            <h3>Veto is proven to be the most overpowered sentinel and we ACKNOWLEDGE this, so we are now nerfing Chamber. We will continue doing this till this agent gets a zero pick rate :P</h3>
+                            <p class="news-card-date">October 29, 2025</p>
+                        </div>
+                    </div>
+                     <div class="news-card">
+                        <img src="riot-dev.jpg" alt="News Image 3">
+                        <div class="news-card-content">
+                            <p class="news-card-category">Exciting news</p>
+                            <h3>League of Legends: Wild Rift Patch 6.3 Preview
+                            </h3>
+                            <p class="news-card-date">October 10, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <h2>Join Us</h2>
+                <p>We're always looking for new talent to help us on our mission.</p>
+                <a href="https://www.riotgames.com/en/work-with-us" class="btn btn-primary">See All Careers</a>
+            </div><br><br>
+            <div class="hiring-section-container">
+                <div class="htext-col">
+                    <p style="color: black; font-weight: 300; font-size: large;">Team up with Riot to forge your path and craft unforgettable experiences for players</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="hnum">165</span>
+                            <span class="hlabel">Open positions</span>
+                        </div>
+                        <div class="stat">
+                            <span class="hnum">26</span>
+                            <span class="hlabel">Offices</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="himg-col">
+                    <img src="image-beside-we-are-hiring.jpg" alt="Riot Games office statue of character">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/RiotGames/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/riotgames?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/riotgames/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@riotgames?si=Frm0gZULA1u6Gp8p" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://in.linkedin.com/company/riot-games" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="#">
+                    <svg class="riot-logo" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Riot Games</title><path d="M12.534 21.77l-1.09-2.81 10.52.54-.451 4.5zM15.06 0L.307 6.969 2.59 17.471H5.6l-.52-7.512.461-.144 1.81 7.656h3.126l-.116-9.15.462-.144 1.582 9.294h3.31l.78-11.053.462-.144.82 11.197h4.376l1.54-15.37Z" fill="white"></path></svg>
+                </a>
+                 <ul class="footer-links">
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Notice</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                </ul>
+                <p class="copyright">&copy; 2025 Riot Games, Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

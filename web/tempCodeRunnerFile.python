@@ -1,0 +1,63 @@
+import pandas as pd
+import requests
+import os
+from pathlib import Path
+CSV_FILE = "c:/Users/adity/Desktop/Amazon ML project/68e8d1d70b66d_student_resource/student_resource/dataset/train.csv"
+IMAGE_COLUMN = "image_link"
+ID_COLUMN = "sample_id"
+OUTPUT_FOLDER = "c:/Users/adity/Desktop/Amazon ML project/68e8d1d70b66d_student_resource/student_resource/dataset/train"
+
+Path(OUTPUT_FOLDER).mkdir(exist_ok=True)
+
+df = pd.read_csv(CSV_FILE)
+
+if IMAGE_COLUMN not in df.columns or ID_COLUMN not in df.columns:
+    print(f"Error: Required columns not found. Available columns: {list(df.columns)}")
+    exit()
+
+successful_downloads = 0
+failed_downloads = 0
+
+for index, row in df.iterrows():
+    url = str(row[IMAGE_COLUMN]).strip()
+    sample_id = str(row[ID_COLUMN]).strip()
+    
+    if not url or url.lower() in ['nan', 'none', '']:
+        print(f"Skipping row {index}: Empty URL")
+        continue
+    if '.' in url.split('/')[-1]:
+        ext = '.' + url.split('.')[-1].split('?')[0]
+    else:
+        ext = '.jpg'
+    
+    filename = f"{sample_id}{ext}"
+    filepath = os.path.join(OUTPUT_FOLDER, filename)
+    
+    if os.path.exists(filepath):
+        print(f"Skipping {sample_id}: File already exists")
+        successful_downloads += 1
+        continue
+    
+    try:
+        print(f"Downloading {sample_id} from {url}...")
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+        
+        with open(filepath, 'wb') as f:
+            f.write(response.content)
+        
+        successful_downloads += 1
+        print(f"Successfully downloaded: {filename}")
+        
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to download {sample_id}: {str(e)}")
+        failed_downloads += 1
+    except Exception as e:
+        print(f"Unexpected error for {sample_id}: {str(e)}")
+        failed_downloads += 1
+
+print("\n" + "="*50)
+print(f"Total URLs processed: {len(df)}")
+print(f"Successful downloads: {successful_downloads}")
+print(f"Failed downloads: {failed_downloads}")
+print(f"Images saved to: {os.path.abspath(OUTPUT_FOLDER)}")
