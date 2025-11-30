@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%
     String username = (String) session.getAttribute("username");
+    String avatar = (String) session.getAttribute("avatar");
 %>
 <header class="main-header">
     <div class="container">
@@ -22,7 +23,7 @@
                 if (username != null) {
                 %>
                     <a href="profile.jsp" class="user-avatar-link">
-                        <img src="default-avatar.png" alt="Avatar">
+                        <img src="avatar1/<%= avatar %>" alt="Avatar">
                         <%= username %>
                     </a>
                 <%
